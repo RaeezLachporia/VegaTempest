@@ -12,6 +12,8 @@ public class BattleSystem : MonoBehaviour
     public GameObject EnemyCharacter;
     
     public TMP_Text NemeyName;
+    public TMP_Text playerName;
+    public TMP_Text dialogueText;
     public Transform PlayerSpawn;
     public Transform EnemySpawn;
     public BattleStates State;
@@ -33,6 +35,8 @@ public class BattleSystem : MonoBehaviour
         enemyUnit = enemyGameO.GetComponent<UnitValues>();
 
         NemeyName.text = "Cameron The bald one";
+        playerName.text = "Raeez The scared";
+        dialogueText.text = NemeyName.text + " approaches " + playerName.text + " for a battle, who will win";
     }    
     
 }
