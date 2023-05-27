@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2095107593042731752
+--- !u!1 &8623655623690303715
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3934162584549037916}
-  - component: {fileID: 5454790235026996013}
-  m_Layer: 0
+  - component: {fileID: 8623655623690303714}
+  - component: {fileID: 8623655623690303713}
+  m_Layer: 6
   m_Name: Raeez
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3934162584549037916
+--- !u!4 &8623655623690303714
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095107593042731752}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_GameObject: {fileID: 8623655623690303715}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.001988801, y: 0.095, z: 0}
+  m_LocalScale: {x: 0.7467743, y: 0.7467743, z: 0.7467743}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 4045172779562310524}
+  - {fileID: 8623655625451250357}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5454790235026996013
+--- !u!114 &8623655623690303713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095107593042731752}
+  m_GameObject: {fileID: 8623655623690303715}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15b8a661e8c26b94b9df3f8914f0230e, type: 3}
@@ -49,7 +49,7 @@ MonoBehaviour:
   Damage: 2
   MaxHp: 10
   CurrentHp: 10
---- !u!1 &4123603452041939474
+--- !u!1 &8623655625451250358
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,37 +57,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4045172779562310524}
-  - component: {fileID: 175909276945442440}
-  m_Layer: 0
+  - component: {fileID: 8623655625451250357}
+  - component: {fileID: 8623655625451250356}
+  m_Layer: 6
   m_Name: RaeezSpritePage_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4045172779562310524
+--- !u!4 &8623655625451250357
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4123603452041939474}
+  m_GameObject: {fileID: 8623655625451250358}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3934162584549037916}
+  m_Father: {fileID: 8623655623690303714}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &175909276945442440
+--- !u!212 &8623655625451250356
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4123603452041939474}
+  m_GameObject: {fileID: 8623655625451250358}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

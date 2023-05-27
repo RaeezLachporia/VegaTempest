@@ -3,7 +3,11 @@ guid: bc56abef6cc768e46bd0a5dd632da284
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - PlayerCharacter: {fileID: 2095107593042731752, guid: fb1c3ba25b675424ab192253912535fa, type: 3}
+  - EnemyCharacter: {fileID: 3989999705919714144, guid: 22845857352f51942a9f340625967d2f, type: 3}
+  - PlayerSpawn: {fileID: 4071289455293978988, guid: 665efc6fd09bed14fa2474eed9b888b0, type: 3}
+  - EnemySpawn: {fileID: 154728074795281840, guid: 0041569a23294fd479c647d0fb3f97cc, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
