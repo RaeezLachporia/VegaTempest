@@ -8,4 +8,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Auditorium.unity
+    guid: 597c4e1c4c040624685715d2aaacf540
+  - enabled: 1
+    path: Assets/Scenes/Canteen.unity
+    guid: 0f2febd9058902a4c8b937fcf31b0dc7
+  - enabled: 1
+    path: Assets/Scenes/CombatScene.unity
+    guid: 411ed01939d157b459db76685ea1593c
+  - enabled: 1
+    path: Assets/Scenes/HowToPlay.unity
+    guid: 2c3540e7befea684693b67c511e2b7e4
+  - enabled: 1
+    path: Assets/Scenes/Map.unity
+    guid: 521e5c65ed1593e4b955a245b0ba9022
+  - enabled: 1
+    path: Assets/Scenes/RNoffice.unity
+    guid: 148aa198f894c9545beb293b23276450
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 73cc0609609ea514f86ecc260dfa94e8
   m_configObjects: {}
