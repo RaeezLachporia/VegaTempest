@@ -36,12 +36,22 @@ public class BattleSystem : MonoBehaviour
         enemyUnit = enemyGameO.GetComponent<UnitValues>();
 
         
-        dialogueText.text = playerUnit.name + " approaches " + enemyUnit.name + " for a battle, who will win";
-
+       
         playerHud.setHud(playerUnit);
         enemyHud.setHud(enemyUnit);
-        
+
+
+        State = BattleStates.PlayerTurn;
+        PlayerTurn();
+
+
+            
     }   
+
+    void PlayerTurn()
+    {
+        dialogueText.text = "choose an action";
+    }
     
     
     
