@@ -58,12 +58,32 @@ public class BattleSystem : MonoBehaviour
 
         StartCoroutine(playerAttacking());
     }
+
+    public void HealButtonClicked()
+    {
+        if (State != BattleStates.PlayerTurn)
+            return;
+
+        StartCoroutine(playerIsHealing());
+    }
+
+    IEnumerator playerIsHealing()
+    {
+        playerUnit.Healing(5);
+        playerHud.SetHp(playerUnit.CurrentHp);
+        dialogueText.text = "You have healed the wounds you have sustained";
+        yield return new WaitForSeconds(2f);
+
+        State = BattleStates.EnemyTurn;
+        StartCoroutine(EnemyTurn());
+    }
     IEnumerator playerAttacking()
     {
         bool isDead = enemyUnit.RemoveHealth(playerUnit.Damage);
+        dialogueText.text = "You land a shot successfully";
         yield return new WaitForSeconds(2f);
         enemyHud.SetHp(enemyUnit.CurrentHp);
-        dialogueText.text = "You land a shot successfully";
+        
         if (isDead)
         {
            State= BattleStates.Win;
@@ -76,11 +96,17 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+   
+
     IEnumerator EnemyTurn()
     {
-        dialogueText.text = enemyUnit.unitName + "Is about to attack";
+        
+        dialogueText.text = enemyUnit.unitName + " Is about to attack";
         yield return new WaitForSeconds(2f);
 
+       
+        dialogueText.text = enemyUnit.unitName + " has successfully landed and attack against you";
+        yield return new WaitForSeconds(2f);
         bool isdead = playerUnit.RemoveHealth(enemyUnit.Damage);
 
         playerHud.SetHp(playerUnit.CurrentHp);

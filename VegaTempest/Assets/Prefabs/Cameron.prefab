@@ -130,6 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Cameron
-  Damage: 2
-  MaxHp: 10
-  CurrentHp: 10
+  Damage: 3
+  MaxHp: 20
+  CurrentHp: 20

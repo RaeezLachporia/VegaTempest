@@ -19,4 +19,13 @@ public class UnitValues : MonoBehaviour
         else
             return false;
     }
+
+    public void Healing(int HealingAmount)
+    {
+        CurrentHp += HealingAmount;
+        if(CurrentHp>MaxHp)
+        {
+            CurrentHp = MaxHp;
+        }
+    }
 }
