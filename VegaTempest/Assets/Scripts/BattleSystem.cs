@@ -25,27 +25,25 @@ public class BattleSystem : MonoBehaviour
     void Start()
     {
         State = BattleStates.Start;
-        SetupBattle();
+        StartCoroutine(SetupBattle());
 
     }
-    void SetupBattle()
+    IEnumerator SetupBattle()
     {
         GameObject playerGameO =Instantiate(PlayerCharacter, PlayerSpawn);
         playerUnit = playerGameO.GetComponent<UnitValues>();
         GameObject enemyGameO=Instantiate(EnemyCharacter, EnemySpawn);
         enemyUnit = enemyGameO.GetComponent<UnitValues>();
 
-        
-       
+
+        dialogueText.text = "2 friends decide to settle who is the better fighter, who will win";
         playerHud.setHud(playerUnit);
         enemyHud.setHud(enemyUnit);
-
+        yield return new WaitForSeconds(2f);
 
         State = BattleStates.PlayerTurn;
         PlayerTurn();
-
-
-            
+  
     }   
 
     void PlayerTurn()
@@ -53,6 +51,63 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "choose an action";
     }
     
-    
-    
+    public void AttackButtonClicked()
+    {
+        if(State!= BattleStates.PlayerTurn)
+            return;
+
+        StartCoroutine(playerAttacking());
+    }
+    IEnumerator playerAttacking()
+    {
+        bool isDead = enemyUnit.RemoveHealth(playerUnit.Damage);
+        yield return new WaitForSeconds(2f);
+        enemyHud.SetHp(enemyUnit.CurrentHp);
+        dialogueText.text = "You land a shot successfully";
+        if (isDead)
+        {
+           State= BattleStates.Win;
+            endBattle();
+        }
+        else
+        {
+            State = BattleStates.EnemyTurn;
+            StartCoroutine(EnemyTurn());
+        }
+    }
+
+    IEnumerator EnemyTurn()
+    {
+        dialogueText.text = enemyUnit.unitName + "Is about to attack";
+        yield return new WaitForSeconds(2f);
+
+        bool isdead = playerUnit.RemoveHealth(enemyUnit.Damage);
+
+        playerHud.SetHp(playerUnit.CurrentHp);
+        yield return new WaitForSeconds(2f);
+
+        if (isdead)
+        {
+            State = BattleStates.Lose;
+            endBattle();
+        }
+        else
+        {
+            State = BattleStates.PlayerTurn;
+            PlayerTurn();
+        }
+    }
+
+    void endBattle()
+    {
+        if(State== BattleStates.Win)
+        {
+            dialogueText.text = "Your the winner of the fight";
+
+        }
+        else if(State == BattleStates.Lose)
+        {
+            dialogueText.text = "You saldy lose the fight";
+        }
+    }
 }
