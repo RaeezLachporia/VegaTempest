@@ -7,12 +7,12 @@ public class menuHandling : MonoBehaviour
 {
     public void loadGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
 
     public void loadHowToPlay()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 
     public void QuitGame()
@@ -22,12 +22,12 @@ public class menuHandling : MonoBehaviour
 
     public void LoadMap()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(5);
     }
 
     public void LoadAuditorium()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(1);
     }
 
     public void LoadRNOffice()
@@ -37,11 +37,11 @@ public class menuHandling : MonoBehaviour
 
     public void LoadCanteen()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(2);
     }
 
     public void LoadMenu()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(7);
     }
 }

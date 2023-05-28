@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b8a661e8c26b94b9df3f8914f0230e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Cameron
+  unitName: Raeez
   Damage: 2
   MaxHp: 10
   CurrentHp: 10

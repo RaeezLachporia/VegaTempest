@@ -11,13 +11,14 @@ public class BattleSystem : MonoBehaviour
     public GameObject PlayerCharacter;
     public GameObject EnemyCharacter;
     
-    public TMP_Text NemeyName;
-    public TMP_Text playerName;
+   
     public TMP_Text dialogueText;
     public Transform PlayerSpawn;
     public Transform EnemySpawn;
     public BattleStates State;
 
+    public BattleHudInfo playerHud;
+    public BattleHudInfo enemyHud;
     UnitValues playerUnit;
     UnitValues enemyUnit;
     // Start is called before the first frame update
@@ -34,9 +35,14 @@ public class BattleSystem : MonoBehaviour
         GameObject enemyGameO=Instantiate(EnemyCharacter, EnemySpawn);
         enemyUnit = enemyGameO.GetComponent<UnitValues>();
 
-        NemeyName.text = "Cameron The bald one";
-        playerName.text = "Raeez The scared";
-        dialogueText.text = NemeyName.text + " approaches " + playerName.text + " for a battle, who will win";
-    }    
+        
+        dialogueText.text = playerUnit.name + " approaches " + enemyUnit.name + " for a battle, who will win";
+
+        playerHud.setHud(playerUnit);
+        enemyHud.setHud(enemyUnit);
+        
+    }   
+    
+    
     
 }
