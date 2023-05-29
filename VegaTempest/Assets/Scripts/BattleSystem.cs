@@ -67,6 +67,22 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(playerIsHealing());
     }
 
+    IEnumerator EnemyHealing()
+    {
+        if (enemyUnit.CurrentHp<10)
+        {
+            enemyUnit.Healing(5);
+            enemyHud.SetHp(enemyUnit.CurrentHp);
+            dialogueText.text = "The enemy has healed the damage you inflicted on them ";
+            yield return new WaitForSeconds(2f);
+            State = BattleStates.PlayerTurn;
+            StartCoroutine(playerAttacking());
+        }
+        else
+        {
+            StartCoroutine(EnemyTurn());
+        }
+    }
     IEnumerator playerIsHealing()
     {
         playerUnit.Healing(5);
@@ -94,6 +110,9 @@ public class BattleSystem : MonoBehaviour
             State = BattleStates.EnemyTurn;
             StartCoroutine(EnemyTurn());
         }
+
+        
+        
     }
 
    
