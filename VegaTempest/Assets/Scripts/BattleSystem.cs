@@ -93,6 +93,8 @@ public class BattleSystem : MonoBehaviour
         State = BattleStates.EnemyTurn;
         StartCoroutine(EnemyTurn());
     }
+
+
     IEnumerator playerAttacking()
     {
         bool isDead = enemyUnit.RemoveHealth(playerUnit.Damage);
@@ -142,6 +144,7 @@ public class BattleSystem : MonoBehaviour
             PlayerTurn();
         }
     }
+
 
     void endBattle()
     {

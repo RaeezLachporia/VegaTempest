@@ -17,12 +17,12 @@ public class miniMaxTree : MonoBehaviour
     }
     private void generateRecursiveTree(node parent, int depth, bool playermaximizing)
     {
-        if (depth == 0 && parent.BSystem.State = BattleStates.Lose)
+        //if (depth == 0 && parent.BSystem.State = BattleStates.Lose)
         {
             return;
         }
 
-        List
+        
     }
     public node createTree(BattleSystem battleSystem, int depth)
     {

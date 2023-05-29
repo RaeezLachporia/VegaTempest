@@ -44,4 +44,9 @@ public class menuHandling : MonoBehaviour
     {
         SceneManager.LoadScene(7);
     }
+
+    public void LoadPVP()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
