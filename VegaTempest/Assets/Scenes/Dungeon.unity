@@ -407,7 +407,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.43137258, g: 0.2901961, b: 0.28235295, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -424,7 +424,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.51
+  orthographic size: 21.9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -484,9 +484,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257f1f3ed490e5d49a9569f30fea4cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tilemapvisualizer: {fileID: 1498931685}
+  startPosition: {x: 0, y: 0}
   startingPosstion: {x: 0, y: 0}
-  Iterations: 10
-  walkingLength: 10
+  Iterations: 20
+  walkingLength: 20
   startIterations: 1
   tileMapVisualizer: {fileID: 1498931685}
 --- !u!4 &842039824
@@ -635,8 +637,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 842039823}
-        m_TargetAssemblyTypeName: PathwayMapGen, Assembly-CSharp
-        m_MethodName: runGeneration
+        m_TargetAssemblyTypeName: MoreDungeonGeneration, Assembly-CSharp
+        m_MethodName: generateDungeon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

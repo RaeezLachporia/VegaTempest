@@ -5,7 +5,7 @@ using UnityEngine;
 using System.Linq;
 using Random = UnityEngine.Random;
 
-public class PathwayMapGen : MonoBehaviour
+public class PathwayMapGen : MoreDungeonGeneration
 {
     [SerializeField]
     protected Vector2Int startingPosstion = Vector2Int.zero;
@@ -17,7 +17,7 @@ public class PathwayMapGen : MonoBehaviour
     public bool startIterations = true;
     [SerializeField]
     private TileMapVisualizer tileMapVisualizer;
-    public void runGeneration()
+    protected override void RunProceduralGenerating()
     {
         HashSet<Vector2Int> floorPositions = runRandomWalk();
         foreach (var position in floorPositions)
@@ -45,4 +45,6 @@ public class PathwayMapGen : MonoBehaviour
         }
         return floorPositions;
     }
+
+    
 }
